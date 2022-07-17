@@ -2,10 +2,8 @@ class Car {
     String color;
     String gearType;
     int door;
-    Car(){      //기본생성자 호출 시 디폴트 값으로 iv 초기화
-        color = "white";
-        gearType = "auto";
-        door = 4;
+    Car(){      //코드 중복 제거
+        this("white","auto",4); //this()를 통해 같은 클래스의 매개변수를 3개 받을 수 있는 다른 생성자 호출
     }
     Car(String color,String gearType, int door){//생성자 호출 시 매개변수 값 지정
         this.color = color;
